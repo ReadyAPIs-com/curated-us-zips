@@ -4,7 +4,7 @@
 [![Rows](https://img.shields.io/badge/rows-33%2C100-informational.svg)](#whats-in-the-csv)
 [![Updated](https://img.shields.io/badge/last%20updated-2026--05-informational.svg)](CHANGELOG.md)
 
-> A clean, comprehensive, machine-readable CSV of every U.S. ZIP code — with city, state, county, lat/lng, timezone, metro area, population, and U.S. Census ACS demographic enrichment. **One file, MIT-friendly, free to use.**
+> A clean, comprehensive, machine-readable CSV of every U.S. ZIP code - with city, state, county, lat/lng, timezone, metro area, population, and U.S. Census ACS demographic enrichment. **One file, MIT-friendly, free to use.**
 
 This is the dataset that backs [Ready APIs](https://readyapis.com)' `/api/v1/geo/zip/<zip>` endpoint. We curate it from public sources, normalize the shapes (a Census `county_fips` like `01001` always renders as a zero-padded 5-character string; coordinates are always `lat,lng` in decimal degrees; etc.), and re-publish here so anyone can use it without hitting an API.
 
@@ -13,11 +13,11 @@ This is the dataset that backs [Ready APIs](https://readyapis.com)' `/api/v1/geo
 curl -L -o us-zips.csv https://raw.githubusercontent.com/ReadyAPIs-com/curated-us-zips/main/data/us-zips.csv
 ```
 
-If you need the live API surface (per-request lookup, batch validation, cross-checks against city / state / metro), use Ready APIs at [readyapis.com/apis/location-enrichment](https://readyapis.com/apis/location-enrichment). If you just need the data dump, you're in the right place — clone, download, ship.
+If you need the live API surface (per-request lookup, batch validation, cross-checks against city / state / metro), use Ready APIs at [readyapis.com/apis/location-enrichment](https://readyapis.com/apis/location-enrichment). If you just need the data dump, you're in the right place - clone, download, ship.
 
 ## What's in the CSV
 
-`data/us-zips.csv` — one row per ZIP code (33,100 total), header row, UTF-8, RFC 4180 quoting.
+`data/us-zips.csv` - one row per ZIP code (33,100 total), header row, UTF-8, RFC 4180 quoting.
 
 | Column                      | Type    | Example          | Source                |
 |----------------------------|---------|------------------|------------------------|
@@ -51,7 +51,7 @@ Demographic fields are empty (`""`) for territories where Census ACS doesn't pub
 
 ## Quick examples
 
-### Python — load + filter
+### Python - load + filter
 
 ```python
 import csv
@@ -133,17 +133,17 @@ CREATE TABLE us_zips (
 ZIP datasets are everywhere on the internet, but they're almost always one of:
 
 - **Out of date** (Census Gazetteer downloads that haven't been refreshed in three years)
-- **Locked in a paid product** (Smarty, Loqate, Melissa — fantastic data, but you pay per call)
+- **Locked in a paid product** (Smarty, Loqate, Melissa - fantastic data, but you pay per call)
 - **Partial** (ZIP → state only, no county, no demographics)
 - **Inconsistent shapes** (county_fips sometimes 4 digits because the leading zero got dropped in Excel)
 
 We needed a single clean source for our own API, so we curated this. Since the underlying data is mostly public domain, there's no reason not to redistribute the cleaned version.
 
-If you find yourself reaching for it: that's the point. If you want it as a live API (with batch lookup, fuzzy matching, ZIP+4, deliverability flags), check out [Ready APIs](https://readyapis.com) — same data, plus enrichment, served by HTTP.
+If you find yourself reaching for it: that's the point. If you want it as a live API (with batch lookup, fuzzy matching, ZIP+4, deliverability flags), check out [Ready APIs](https://readyapis.com) - same data, plus enrichment, served by HTTP.
 
 ## License
 
-The data in `data/us-zips.csv` is published under **[Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)** — use it freely, including commercially, with attribution.
+The data in `data/us-zips.csv` is published under **[Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)** - use it freely, including commercially, with attribution.
 
 Suggested attribution line:
 
@@ -178,12 +178,12 @@ Out of scope:
 
 This dataset is regenerated whenever we re-ingest the upstreams in production (roughly monthly, sometimes faster when Census publishes new ACS estimates).
 
-The CSV in `main` is always the current production snapshot. Past snapshots are tagged as releases — pin to a specific tag if you need reproducibility.
+The CSV in `main` is always the current production snapshot. Past snapshots are tagged as releases - pin to a specific tag if you need reproducibility.
 
 ## See also
 
-- [Ready APIs Location Enrichment](https://readyapis.com/apis/location-enrichment) — same data, plus enrichment, served as JSON over HTTP. 1,000 free credits/month, no card.
-- [readyapis-python](https://github.com/ReadyAPIs-com/readyapis-python) — Python SDK
-- [readyapis-node](https://github.com/ReadyAPIs-com/readyapis-node) — Node CLI
-- [SimpleMaps US Zip Codes](https://simplemaps.com/data/us-zips) — original upstream for the basic ZIP centroids
-- [U.S. Census ACS](https://www.census.gov/programs-surveys/acs) — original upstream for demographic fields
+- [Ready APIs Location Enrichment](https://readyapis.com/apis/location-enrichment) - same data, plus enrichment, served as JSON over HTTP. 1,000 free credits/month, no card.
+- [readyapis-python](https://github.com/ReadyAPIs-com/readyapis-python) - Python SDK
+- [readyapis-node](https://github.com/ReadyAPIs-com/readyapis-node) - Node CLI
+- [SimpleMaps US Zip Codes](https://simplemaps.com/data/us-zips) - original upstream for the basic ZIP centroids
+- [U.S. Census ACS](https://www.census.gov/programs-surveys/acs) - original upstream for demographic fields

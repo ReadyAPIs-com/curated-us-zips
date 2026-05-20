@@ -1,9 +1,9 @@
 # Regenerating `data/us-zips.csv`
 
 This file documents how Ready APIs regenerates the canonical CSV from
-production. It's not a runnable script in this repo — production
+production. It's not a runnable script in this repo - production
 ingestion happens server-side against the live Postgres database that
-backs the API — but the SQL query below is the exact projection.
+backs the API - but the SQL query below is the exact projection.
 
 ## Source of truth
 
@@ -21,7 +21,7 @@ production. That table is reconciled from:
 
 The pipeline lives in `app/services/geoip_service.py` and
 `scripts/ingest_geo_zip_profiles.py` in the main Ready APIs repo. It's
-not open source today, but the data it produces is — that's this repo.
+not open source today, but the data it produces is - that's this repo.
 
 ## Export query
 
@@ -63,7 +63,7 @@ We regenerate this dataset whenever any of these changes:
 
 - Census releases new ACS 5-year estimates (annually, December).
 - SimpleMaps publishes a new Basic dataset (a few times a year).
-- We notice a row needs correction (rare — opens a GitHub issue first).
+- We notice a row needs correction (rare - opens a GitHub issue first).
 
 On each refresh, we tag the commit with `vYYYY.MM` so consumers can
 pin to a specific snapshot. `main` always carries the latest.
@@ -83,5 +83,5 @@ Before committing a new snapshot, our internal CI runs these checks
 - `county_fips` is exactly 5 digits when present.
 - File size is between 2 MB and 5 MB (catch corrupted exports).
 
-If you find a row that fails any of these, please open an issue — it
+If you find a row that fails any of these, please open an issue - it
 means our CI missed something.
