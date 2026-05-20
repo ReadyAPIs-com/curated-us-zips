@@ -13,7 +13,7 @@ This is the dataset that backs [Ready APIs](https://readyapis.com)' `/api/v1/geo
 curl -L -o us-zips.csv https://raw.githubusercontent.com/ReadyAPIs-com/curated-us-zips/main/data/us-zips.csv
 ```
 
-If you need the live API surface (per-request lookup, batch validation, cross-checks against city / state / metro), use Ready APIs at [readyapis.com/apis/geo](https://readyapis.com/apis/geo). If you just need the data dump, you're in the right place — clone, download, ship.
+If you need the live API surface (per-request lookup, batch validation, cross-checks against city / state / metro), use Ready APIs at [readyapis.com/apis/location-enrichment](https://readyapis.com/apis/location-enrichment). If you just need the data dump, you're in the right place — clone, download, ship.
 
 ## What's in the CSV
 
@@ -182,7 +182,7 @@ The CSV in `main` is always the current production snapshot. Past snapshots are 
 
 ## See also
 
-- [Ready APIs Geo namespace](https://readyapis.com/apis/geo) — same data, plus enrichment, served as JSON over HTTP. 1,000 free credits/month, no card.
+- [Ready APIs Location Enrichment](https://readyapis.com/apis/location-enrichment) — same data, plus enrichment, served as JSON over HTTP. 1,000 free credits/month, no card.
 - [readyapis-python](https://github.com/ReadyAPIs-com/readyapis-python) — Python SDK
 - [readyapis-node](https://github.com/ReadyAPIs-com/readyapis-node) — Node CLI
 - [SimpleMaps US Zip Codes](https://simplemaps.com/data/us-zips) — original upstream for the basic ZIP centroids
