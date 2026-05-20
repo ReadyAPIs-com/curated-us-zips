@@ -1,0 +1,45 @@
+Attribution 4.0 International — CC BY 4.0
+
+Copyright (c) 2026 Ready APIs and contributors.
+
+The data in this repository is licensed under the Creative Commons
+Attribution 4.0 International License. To view a copy of this license,
+visit https://creativecommons.org/licenses/by/4.0/ or send a letter to
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+You are free to:
+
+  Share — copy and redistribute the material in any medium or format.
+  Adapt — remix, transform, and build upon the material for any purpose,
+  including commercially.
+
+Under the following terms:
+
+  Attribution — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.
+
+  No additional restrictions — You may not apply legal terms or
+  technological measures that legally restrict others from doing
+  anything the license permits.
+
+Suggested attribution line:
+
+  ZIP data from Ready APIs curated-us-zips
+  (https://github.com/ReadyAPIs-com/curated-us-zips), sourced from
+  U.S. Census Bureau, USPS, and SimpleMaps.
+
+────────────────────────────────────────────────────────────────────────
+
+Underlying source licenses still apply to their respective portions of
+the data. See README.md § License for details. In summary:
+
+  - U.S. Census Bureau data: public domain (17 U.S.C. § 105).
+  - U.S. Postal Service ZIP assignments: not subject to copyright.
+  - SimpleMaps US Zip Codes Basic: CC BY 4.0
+    (https://simplemaps.com/data/us-zips).
+  - IANA tz database: public domain.
+
+The structure, normalization, and combination of these sources into
+this single CSV is what Ready APIs releases under CC BY 4.0.
